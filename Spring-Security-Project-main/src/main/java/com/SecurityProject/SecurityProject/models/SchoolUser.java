@@ -17,6 +17,8 @@ public class SchoolUser {
     private String name;
     private String username;
     private String password;
+    private String email;
+
 
     //to manage the relationship
     @ManyToMany(fetch = EAGER)

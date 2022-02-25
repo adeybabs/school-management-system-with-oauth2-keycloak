@@ -24,29 +24,21 @@ public class SecurityProjectApplication {
 		return new BCryptPasswordEncoder();
 	}
 
-	@Bean
-	CommandLineRunner run(UserService userService){
-		return args -> {
+//	@Bean
+//	CommandLineRunner run(UserService userService){
+//		return args -> {
+//
+//
+//			userService.addRoleToUser("Sarah", "STUDENT");
+//			userService.addRoleToUser("Jane", "ADMIN");
+//			userService.addRoleToUser("Fisher", "STAFF");
+//			userService.addRoleToUser("Don", "STAFF");
+//			userService.addRoleToUser("Chi", "STUDENT");
+//			userService.addRoleToUser("Angel", "ALUMNI");
+//
+//
+//		};
+//	}
 
-			userService.saveRole(new Role(null, "STUDENT"));
-			userService.saveRole(new Role(null, "ALUMNI"));
-			userService.saveRole(new Role(null, "STAFF"));
-			userService.saveRole(new Role(null, "ADMIN"));
-
-			userService.saveUser(new SchoolUser(null, "Jon Doe", "Jon", "4321",new ArrayList<>()));
-			userService.saveUser(new SchoolUser(null, "Jane Dane", "Jane", "jane21",new ArrayList<>()));
-			userService.saveUser(new SchoolUser(null, "Fisher Rey", "Rey", "fish",new ArrayList<>()));
-			userService.saveUser(new SchoolUser(null, "Dreamer Gal", "Dreamer", "dream",new ArrayList<>()));
-
-			userService.addRoleToUser("Jon", "STUDENT");
-			userService.addRoleToUser("Jane", "ADMIN");
-			userService.addRoleToUser("Jane", "STAFF");
-			userService.addRoleToUser("Rey", "STAFF");
-			userService.addRoleToUser("Dreamer", "STUDENT");
-			userService.addRoleToUser("Jon", "ALUMNI");
-
-
-		};
-	}
 
 }
